@@ -7,8 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MatchController {
 	
 	
+	private static final String HEROKUAPP_URL = "https://hackathon-wild-hackoween.herokuapp.com";
+	
 	@GetMapping("/match")
 	public String matchPage() {
+		
+		
+		
+		
+		
+		
+		
+		
     	return "match";
 	}
 }
