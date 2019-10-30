@@ -35,8 +35,6 @@ public class FilmFromJson {
 			   e.printStackTrace();
 			}
 
-	
-
 		try {
 			JsonNode movie = objectMapper.readTree(response).get("movies");
 		   myFilm = objectMapper.convertValue(movie, Film[].class);

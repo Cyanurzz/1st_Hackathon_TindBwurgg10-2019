@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.wildcodeschool.TindBwurgg.FilmFromJson;
+import com.wildcodeschool.TindBwurgg.MonsterFromJson;
+import com.wildcodeschool.TindBwurgg.model.Film;
 
 @Controller
 public class MatchController {
@@ -16,6 +18,6 @@ public class MatchController {
 		model.addAttribute("film", FilmFromJson.getMyFilm());
 
 			return "match";
-		
 	}
+	
 }
