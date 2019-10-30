@@ -3,7 +3,9 @@ package com.wildcodeschool.TindBwurgg;
 import java.util.ArrayList;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import com.wildcodeschool.TindBwurgg.model.Film;
+import com.wildcodeschool.TindBwurgg.model.Monster;
 
 @SpringBootApplication
 public class TindBwurggApplication {
@@ -13,8 +15,10 @@ public class TindBwurggApplication {
 		SpringApplication.run(TindBwurggApplication.class, args);
 
 		Film[] filmList = FilmFromJson.createFilms();
-		
-		System.out.print(filmList[5].getDirector());
+		Monster[] monsterList = MonsterFromJson.createMonster();
+		System.out.println(filmList[3].getDirector());
+		System.out.println(monsterList[2].getName());
+
 
 	}
 
