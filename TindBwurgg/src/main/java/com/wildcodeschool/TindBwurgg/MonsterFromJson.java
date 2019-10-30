@@ -1,4 +1,4 @@
-package com.wildcodeschool.TindBwurgg.controller;
+package com.wildcodeschool.TindBwurgg;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +18,7 @@ import reactor.core.publisher.Mono;
 public class MonsterFromJson {
 		
 	static String url = "https://hackathon-wild-hackoween.herokuapp.com/monsters";
-	private Monster[] myMonster;
+	private static Monster[] myMonster;
 		
 	public static Monster[] createMonster() {
 		WebClient webClient = WebClient.create(url);
@@ -37,23 +37,20 @@ public class MonsterFromJson {
 			   e.printStackTrace();
 			}
 
-		ArrayList<Monster> myMonster = new ArrayList<Monster>();
-		
-		Monster[] mymonster = null;
 
 		try {
 			JsonNode monster = objectMapper.readTree(response).get("monsters");
-		   mymonster = objectMapper.convertValue(monster, Monster[].class);
+		   myMonster = objectMapper.convertValue(monster, Monster[].class);
 		} catch (JsonProcessingException e) {
 		   e.printStackTrace();
 		}
 		
-		return mymonster;
+		return myMonster;
 		
 	}
 	
 
-	public Monster[] getMyMonster() {
+	public static Monster[] getMyMonster() {
 		return myMonster;
 	}
 
