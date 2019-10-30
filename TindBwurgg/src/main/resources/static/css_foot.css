@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+@import url('chalet-new-york-nineteen-seventy.ttf');
+
+body {
+  font-family: 'Lacquer', sans-serif;
+  color:#ff6a00;
+  position:relative;
+  margin:0;
+  padding:0;
+  padding-bottom:150px;
+}
+body:after,
+footer:after,
+.main:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+.main {
+  position:relative;
+  z-index:2;
+  height:1000px;
+  margin:0;
+  padding:50px;
+  background:#000000;
+  text-align:center;
+  box-shadow:0 1px 5px #000;
+}
+h1 {
+  font-size: 3em;
+  display:block;
+  margin:0;
+  font-weight:100;
+  text-shadow:0 20px 8px #ff8f40 ;
+}
+footer {
+  display:block;
+  position:fixed;
+  z-index:1;
+  height:120px;
+  bottom:0;
+  width:100%;
+  padding:15px;
+  background:#ff6a00;
+  text-align:center;
+  color:#ffffff;
+}
+
+span {
+  font-size:2em;
+}
