@@ -16,7 +16,7 @@ import reactor.core.publisher.Mono;
 public class FilmFromJson {
 		
 	static String url = "https://hackathon-wild-hackoween.herokuapp.com/movies";
-	private Film[] myFilm;
+	private static Film[] myFilm;
 		
 	public static Film[] createFilms() {
 		WebClient webClient = WebClient.create(url);
@@ -35,23 +35,21 @@ public class FilmFromJson {
 			   e.printStackTrace();
 			}
 
-		ArrayList<Film> myFilms = new ArrayList<Film>();
-		
-		Film[] myfilms = null;
+	
 
 		try {
 			JsonNode movie = objectMapper.readTree(response).get("movies");
-		   myfilms = objectMapper.convertValue(movie, Film[].class);
+		   myFilm = objectMapper.convertValue(movie, Film[].class);
 		} catch (JsonProcessingException e) {
 		   e.printStackTrace();
 		}
 		
-		return myfilms;
+		return myFilm;
 		
 	}
 	
 
-	public Film[] getMyFilm() {
+	public static Film[] getMyFilm() {
 		return myFilm;
 	}
 

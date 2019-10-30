@@ -14,7 +14,7 @@ public class TindBwurggApplication {
 
 		Film[] filmList = FilmFromJson.createFilms();
 		
-		System.out.print(filmList[3].getDirector());
+		System.out.print(filmList[5].getDirector());
 
 	}
 
