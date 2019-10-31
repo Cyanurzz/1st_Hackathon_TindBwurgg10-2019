@@ -1,13 +1,66 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Evaluation</title>
-<link rel="stylesheet" href="style.css">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/CSS/evaluation.css">
 </head>
-
 <body>
-<h1>Tu as passé un bon moment ?</h1>
-<p>Donnes nous tes impressions et note le monstre avec qui tu es sorti!</p>
-</body>
-</html>
+
+
+<div class="container">
+        <h1 class="heading"> TindBwurgg </h1>
+        <input type="checkbox" name="bar" id="bar">
+        <label for="bar" class="trigger"><i class="fa fa-bars"></i></label>
+        <ol class="main-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Feature</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+        </ol>
+    </div>
+
+
+
+
+<h1 class="h1">Tu as passé un bon moment ?</h1>
+
+<h2 class="h2">Donne nous tes impressions et note le monstre avec qui tu es sorti!</h2>
+
+<section class="boutonRate">
+    <div class="rate">
+       <input type="radio" id="star5" name="rate" value="5" />
+       <label for="star5" title="Chef d'oeuvre">5 stars</label>
+       <input type="radio" id="star4" name="rate" value="4" />
+       <label for="star4" title="Trés bien">4 stars</label>
+       <input type="radio" id="star3" name="rate" value="3" />
+       <label for="star3" title="Pas mal">3 stars</label>
+       <input type="radio" id="star2" name="rate" value="2" />
+       <label for="star2" title="Pas terrible">2 stars</label>
+       <input type="radio" id="star1" name="rate" value="1" />
+       <label for="star1" title="Trés mauvais">1 star</label>
+    </div>
+
+    <textarea name="" id="" cols="10" rows="5" placeholder="Dites-nous si votre rencontre s'est bien passée !"></textarea>
+
+
+
+
+
+    <div>
+        <button class="boutonListe" type="button" onclick="alert('Ton évaluation à été reçu!')">Envoyer</button>
+    </div>
+</section>
+
+
+
+  <footer>
+    <p>Copyright© Jean, Daniel, Jean-Christophe and Samir.<br>TindBwurgg App © Made for the Hackathon October - 2019</p>
+  </footer>
+  
+  </body>
+  </html>
