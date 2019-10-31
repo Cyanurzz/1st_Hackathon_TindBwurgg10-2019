@@ -11,38 +11,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/CSS/style.scss">
-    
+    <link rel="stylesheet" href="/CSS/profil.css">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Roboto&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <a class="navbar-brand" href="#"><h3>tind<span>Bwurgg !</span></h3></a>
-          
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Monster Matched You</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Monster you've Matched</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Logout</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
-    </header>
+       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+           <a class="navbar-brand" href="#"><h3>tind<span>Bwurgg !</span></h3></a>            <!-- Toggler/collapsibe Button -->
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+             <span class="navbar-toggler-icon"></span>
+           </button>            <!-- Navbar links -->
+           <div class="collapse navbar-collapse" id="collapsibleNavbar">
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                 <a class="nav-link" href="/evaluation">Evaluation</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="/">Logout</a>
+               </li>
+             </ul>
+           </div>
+       </nav>
+   </header>
     <main>
         <div class="alert alert-success" role="alert">
           <h4 th:text = " 'hello ' + ${nameConnect}"class="alert-heading"></h4>
-          <p>Aww, Vous ètes divinement laid aujourd'hui !</p>
+          <p>Aww, Vous êtes divinement laid aujourd'hui !</p>
         </div>      
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner col-11 mx-auto">
@@ -96,8 +91,9 @@
         </div>
     </main>
     <footer>
-        
-    </footer>
+		  <p>The wide monster community thanks warmly Jean, Daniel <br> 
+				Jean-Christophe and Samir for this app!<br>TindBurgg App © Made for the Hackatton October - 2019</p>
+	</footer>
     <script src="/JS/swipe.js"></script>
 </body>
 </html>

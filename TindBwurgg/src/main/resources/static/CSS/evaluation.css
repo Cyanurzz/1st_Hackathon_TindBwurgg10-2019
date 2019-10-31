@@ -5,8 +5,7 @@
 
 body {
             font-family: 'Lacquer', sans-serif;padding:0px;margin:0px;
-            background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2Fe%2Fd%2Fa%2F392604.jpg&f=1&nofb=1");
-        }
+}
 
           h1 {
             font-family: 'Lacquer';
@@ -57,16 +56,7 @@ body {
         .trigger{
             display: none;
         }
-        @media (max-width: 720px) {
-            .main-menu{
-                display:none;
-                position: absolute;
-                top: 50px;
-                width: 100%;
-                right: 0;
-                opacity: 1;
-                animation: anim .5s reverse;
-            }
+        
             @keyframes anim {
                 0%{
                     opacity: 0;
