@@ -7,7 +7,7 @@
     
 })(jQuery);
 $('.carousel').carousel({
-    interval: false
+    interval: 10000
 });
 
 $(".more-info-card").hide(); //Cache More Info sur ma page
@@ -26,3 +26,4 @@ $(document).ready(function(){ //Dépli les info supplémentaire
       $(".topCard").slideDown();
     });
   });
+$(".alert").show("slow").delay(2000).hide("slow");
