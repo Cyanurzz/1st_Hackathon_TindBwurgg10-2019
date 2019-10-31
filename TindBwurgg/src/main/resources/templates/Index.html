@@ -1,11 +1,53 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="th">
 <head>
-<meta charset="UTF-8">
-<title>TindBwurg</title>
-<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/CSS/style.scss">
+	<link rel="stylesheet" href="/CSS/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Lacquer|Roboto&display=swap" rel="stylesheet"> 
 </head>
 <body>
-<h1>Hello World</h1>
+	<header>
+		<div class="title">
+			<h1>tindBwurgg</h1>
+		</div>
+	</header>
+	<main>
+		<img class="img-fluid" src="/pictures/indexmobile.png" alt="">
+		<container> 
+		<button type="button" class="button" data-toggle="modal" data-target="#exampleModal">Connect</button>
+		</container>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<label for="name">Your Monster Name:</label>
+						<form action="/profil" method="get">
+							<input type="text" id="name" name="name" required>
+							<button type="submit" class="btn btn-dark">Connect</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p>The wide monster community thanks warmly Jean, Daniel <br> 
+				Jean-Christophe and Samir for this app!<br>TindBurgg App © Made for the Hackatton October - 2019</p>
+	</footer>
 </body>
 </html>

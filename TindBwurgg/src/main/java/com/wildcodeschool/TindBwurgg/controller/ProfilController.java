@@ -2,7 +2,9 @@ package com.wildcodeschool.TindBwurgg.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.wildcodeschool.TindBwurgg.MonsterFromJson;
 
@@ -11,9 +13,9 @@ public class ProfilController {
 	
 	
 	@GetMapping("/profil")
-	public String profilPage(Model model) {
-		
-		model.addAttribute("monster", MonsterFromJson.getMyMonster());
+	public String profilPage(@RequestParam(value="name") String name, ModelMap modelMap) {
+		modelMap.put("nameConnect", name);
+		modelMap.addAttribute("monster", MonsterFromJson.getMyMonster());
     	return "profil";
 	}
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +40,11 @@
         </nav>
     </header>
     <main>
+      <section>
+        <div>
+          <h1 th:text = " 'hello ' + ${nameConnect}">hello</h1>
+        </div>
+      </section>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner col-12">
                 <div th:each="list : ${monster}" class="carousel-item active">
