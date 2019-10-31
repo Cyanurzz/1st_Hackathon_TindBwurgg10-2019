@@ -36,7 +36,7 @@
    </header>
     <main>
         <div class="alert alert-success" role="alert">
-          <h4 th:text = " 'hello ' + ${nameConnect}"class="alert-heading"></h4>
+          <h4 th:text = " 'hello ' + ${nameConnect}" class="alert-heading"></h4>
           <p>Aww, Vous êtes divinement laid aujourd'hui !</p>
         </div>      
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -68,7 +68,9 @@
                         <div class="choice d-flex justify-content-around">
                             <input class="slideDown btn btn-primary" type="button" value="Voir Plus">
                               <form action="/match" method="get">
-                                <input type="hidden" th:name="${list.name}">
+                                <input type="hidden" name="name" th:value="${list.name}">
+                                <input type="hidden" name="desc" th:value="${list.description}">
+                                <input type="hidden" name="pic" th:value="${list.picture}">
                                 <button type="submit" class="btn btn-success">Connect</button>
                               </form>
                         </div>
@@ -88,7 +90,6 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
         </a>
-        </div>
     </main>
     <footer>
 		  <p>The wide monster community thanks warmly Jean, Daniel <br> 
