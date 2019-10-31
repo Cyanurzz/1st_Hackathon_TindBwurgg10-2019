@@ -22,6 +22,7 @@
   <script src="/JS/test.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
 <main>
   <header th:replace="header.html: top">
   </header>
@@ -47,8 +48,18 @@
 
 </main>
 
+=======
+<h1>Félicitation</h1>
+<h2>Voici la les infos sur le monstre que tu vas rencontrer</h2>
+<br>
 
-
+<ul th:each="list : ${film}">
+    <li th:text="${list.getTitle()}">title</li>
+    <li th:text="${list.director}">director</li>
+    <li th:text="${list.year}">Year</li>
+  	<img th:src="@{${list.posterUrl}}"/>
+</ul>
+>>>>>>> fc9e4e419e97b612dbe8bea262c0ac79cd2903cf
 
 
 <p>choisi le film que tu vas partager avec lui</p>
