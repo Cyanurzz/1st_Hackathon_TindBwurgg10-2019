@@ -1,102 +1,19 @@
-@charset "UTF-8";
-   @import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
-   @import url('chalet-new-york-nineteen-seventy.ttf');
-   
-
-body {
-            font-family: 'Lacquer', sans-serif;padding:0px;margin:0px;
-}
-
-          h1 {
-            font-family: 'Lacquer';
-            color:#ff7e24;
-            text-shadow:0 3px 8px #ff8f40 ;
-          }
-
-
-        a{
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            display: inline-block;
-            transition: .5s;
-        }
-        .container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            background-color: #000000;
-            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
-        }
-        .main-menu > li{
-            float: left;
-            padding: 10px;
-            background: #000000;
-            color: white;
-            position: relative;
-          list-style-type: none;
-        }
-        .main-menu li a {
-            font-size: 15px;
-        }
-        .main-menu > li:hover > a{
-            background-color: #ff7e24;
-        }
-        .heading {
-            font-size: 30px;
-            margin-top: auto;
-            margin-bottom: auto;
-            margin-right: auto;
-            margin-left: auto;
-          
-        }
-        #bar {
-            -webkit-appearance: none;
-        }
-        .trigger{
-            display: none;
-        }
-        
-            @keyframes anim {
-                0%{
-                    opacity: 0;
-                }
-                100%{
-                    opacity: 1;
-                }
-            }
-            .main-menu > li {
-                float: none;
-            }
-            .trigger{
-                display: block;
-            }
-            .trigger > i {
-                font-size: 30px;
-                color: white;
-                padding: 10px;
-            }
-            #bar:checked ~ .main-menu {
-                display: block;
-                opacity: 0;
-                animation: anim .5s forwards;
-            }
-            #bar:checked ~ .trigger {
-                background-color: black;
-            }
-        }
-
-
-                        /*BODY*/
-
-
-
 * {
     margin:0;
-    font-family: 'Lacquer', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-   
+.navbar{
+	z-index: 20;
+	background: black !important;
+}
+
+.navbar h3{
+	font-family: 'lacquer', sans-serif;
+	color: #ff6a00;
+	font-size: 35px;
+}
+
 
 .h1{
     margin-top: 60px;
@@ -183,59 +100,15 @@ textarea {
 }
 
 
-
-                                /*FOOTER*/
-
-
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
-@import url('chalet-new-york-nineteen-seventy.ttf');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-body {
-  
-  color:#ff6a00;
-  position:relative;
-  margin:0;
-  padding:0;
-
-}
-body:after,
-footer:after,
-.main:after {
-  content:"";
-  display:block;
-  clear:both;
-}
-
-h1 {
-  font-size: 3em;
-  display:block;
-  margin:0;
-  font-weight:100;
-  
-}
-footer {
-  display:flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100vw;
-  z-index:1;
-  bottom:0;
-  padding:15px;
-  padding-right: 0px;
-  padding-left: 0px;
-  background-color:rgb(241, 59, 3);
-  text-align:center;
-  color:#ffffff;
-  margin-top: 60px;
-}
-
-footer p{
-    font-family: 'Roboto', sans-serif;
-}
-
-span {
-  font-size:2em;
+                             
+footer{
+	padding-top: 7px;
+	margin: 20px 0 0 0;
+	height: 60px;
+	color: #ff6a00;
+	background: black;
+	font-family: 'roboto', sans-serif;
+	font-size: 10px;
+	text-align: center;
+	
 }

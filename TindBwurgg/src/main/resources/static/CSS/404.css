@@ -1,4 +1,3 @@
-
 footer{
 	padding-top: 7px;
 	margin: 20px 0 0 0;
@@ -37,4 +36,10 @@ footer{
 
 .choice{
 	margin-bottom: 15px;
+}
+.erreur{
+	font-size: 80px;
+}
+body{
+	text-align: center;
 }
