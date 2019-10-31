@@ -2,7 +2,9 @@ package com.wildcodeschool.TindBwurgg.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.wildcodeschool.TindBwurgg.FilmFromJson;
 import com.wildcodeschool.TindBwurgg.MonsterFromJson;
@@ -13,10 +15,10 @@ public class MatchController {
 	
 	
 	@GetMapping("/match")
-	public String matchPage(Model model) {
-
-		model.addAttribute("film", FilmFromJson.getMyFilm());
-
+	public String matchPage(ModelMap modelMap) {
+		
+		modelMap.addAttribute("film", FilmFromJson.getMyFilm());
+		
 			return "match";
 	}
 	
