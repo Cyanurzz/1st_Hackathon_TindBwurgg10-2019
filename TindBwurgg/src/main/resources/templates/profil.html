@@ -40,11 +40,11 @@
     </header>
     <main>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div th:each="list : ${monster}" class="carousel-inner col-12">
-                <div class="carousel-item active">
+            <div class="carousel-inner col-12">
+                <div th:each="list : ${monster}" class="carousel-item active">
                     <div class="card">
                         <div class="topCard">
-                            <img src="https://via.placeholder.com/200x200?text=Profils+Tromb"  class="card-img-top" alt="...">
+                            <img th:src="@{${list.picture}}" class="card-img-top" alt="..."/>
                         
                         </div>
                         <h1 th:text="${list.name}">Morpionibus</h1>
@@ -58,7 +58,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="carousel-item">
 
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

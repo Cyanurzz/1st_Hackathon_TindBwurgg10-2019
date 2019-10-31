@@ -9,12 +9,13 @@
 <h1>Félicitation</h1>
 <h2>Voici la les infos sur le monstre que tu vas rencontrer</h2>
 <br>
+
 <ul th:each="list : ${film}">
-    <li th:text="${list.getId()}">Name</li>
-    <li th:text="${list.director}">Director</li>
+    <li th:text="${list.getTitle()}">title</li>
+    <li th:text="${list.director}">director</li>
+    <li th:text="${list.year}">Year</li>
+  	<img th:src="@{${list.posterUrl}}"/>
 </ul>
-
-
 
 
 <p>choisi le film que tu vas partager avec lui</p>

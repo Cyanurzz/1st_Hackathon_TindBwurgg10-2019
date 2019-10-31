@@ -10,7 +10,7 @@ public class Film {
 	private String posterUrl;
 	private String createdAt;
 	private String updatedAt;
-	
+
 	
 	public Film() {
 		
@@ -95,5 +95,6 @@ public class Film {
 	public void setUpdatedAt(String updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+
 	
 }
