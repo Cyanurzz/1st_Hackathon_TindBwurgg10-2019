@@ -18,7 +18,7 @@
     <header th:replace="header.html :: top">
 
     </header>
-        <main>
+    <main>
             <div class="alert alert-success" role="alert">
                 <h4 th:text = "${nameConnect}" class="alert-heading"></h4>
                 <p>Whaou ! tu as trouvé cette personne de toute horreur ! tu me dégoute de joie ! </p>
@@ -33,18 +33,28 @@
                             <option th:each="list : ${film}" th:text="${list.getTitle()}" value="1"></option>
                         </select>
                     </div>
-                    <input type="button" class="btn btn-success" values="Seen More">
+                    <input type="button" class="btn btn-success regarderFilm" values="Seen More">
                 </div>
             </form>
+            <!--
 
-
+            
+            <div class="card movie-card">
+                <div class="more-info-card">
+                    <img th:src="@{${list.posterUrl}}" class="card-img-top" alt="..."/>  
+                </div>
+                <h1 th:text="${list.getTitle()}">Morpionibus</h1>
+                <p th:text="${list.description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim autem dolores nobis unde dicta voluptatibus ipsa porro cumque. Alias hic optio quo. Porro ducimus exercitationem, quidem sint sit explicabo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab dicta at, numquam nobis consectetur. Pariatur, recusandae ipsum? Incidunt quaerat ratione illo sint dolorem repudiandae nulla assumenda officiis corporis explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vitae quia expedita, tenetur iste quibusdam modi, ducimus nihil velit consectetur itaque dolore magnam sapiente necessitatibus sint deleniti similique corporis facilis.</p>
+                <input class="slideUp btn btn-primary col-12 mx-auto" type="button" value="Voir moins">
+            </div>
              
+
             <ul th:each="list : ${film}">
                 <li th:text="${list.getTitle()}">title</li>
                 <li th:text="${list.director}">director</li>
                 <li th:text="${list.year}">Year</li>
   	            <img th:src="@{${list.posterUrl}}"/>
-            </ul>
+            </ul>  -->
 
 
             <p>choisi le film que tu vas partager avec lui</p>

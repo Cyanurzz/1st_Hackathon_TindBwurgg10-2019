@@ -28,5 +28,13 @@ $(document).ready(function(){ //Dépli les info supplémentaire
   });
   // Add delay on Alert open
 
-  
+
 $(".alert").show("slow").delay(5000).hide("slow");
+
+$(document).ready(function(){ //Dépli les info supplémentaire
+    $("regarderFilm").click(function(){
+      $(".").slideDown();
+      $(".topCard").slideUp();
+      $(".choice").hide();
+    });
+  });
