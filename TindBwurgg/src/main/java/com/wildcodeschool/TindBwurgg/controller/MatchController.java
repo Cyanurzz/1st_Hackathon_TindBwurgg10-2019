@@ -15,8 +15,8 @@ public class MatchController {
 	
 	
 	@GetMapping("/match")
-	public String matchPage(ModelMap modelMap) {
-		
+	public String matchPage(@RequestParam(value="name") String monsterParm, ModelMap modelMap) {
+		modelMap.put("matchMonster", monsterParm);
 		modelMap.addAttribute("film", FilmFromJson.getMyFilm());
 		
 			return "match";
