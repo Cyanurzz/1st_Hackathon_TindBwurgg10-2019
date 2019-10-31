@@ -18,7 +18,7 @@
 <body>
     <header>
        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-           <a class="navbar-brand" href="#"><h3>tindBwurgg !</h3></a>            <!-- Toggler/collapsibe Button -->
+           <a class="navbar-brand"><h3>tind<span>Bwurgg !</span></h3></a>            <!-- Toggler/collapsibe Button -->
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
              <span class="navbar-toggler-icon"></span>
            </button>            <!-- Navbar links -->
@@ -28,17 +28,16 @@
                  <a class="nav-link" href="/evaluation">Evaluation</a>
                </li>
                <li class="nav-item">
-                 <a class="nav-link" href="/">Logout</a>
+                 <a class="nav-link" href="/">Déconnexion</a>
                </li>
              </ul>
            </div>
        </nav>
    </header>
-   <h1>Choose your creepy monster !</h1>
     <main>
         <div class="alert alert-success" role="alert">
-          <h4 th:text = " 'Hello ' + ${nameConnect}"class="alert-heading"></h4>
-          <p>Aww, You are divinely ugly today !</p>
+          <h4 th:text = " 'hello ' + ${nameConnect}" class="alert-heading"></h4>
+          <p>Aww, Vous êtes divinement laid aujourd'hui !</p>
         </div>      
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner col-11 mx-auto">
@@ -49,13 +48,14 @@
                       <img src="/pictures/sylvain.jpg" class="card-img-top" alt="..."/>  
                     </div>
                     <h1>Sylvain</h1>
+
                     <div class="choice d-flex justify-content-around">
-                        <input class="slideDown btn btn-primary" type="button" value="See more">
-                        <input class="btn btn-success" type="button" value="Choose">
+                        <input class="slideDown btn btn-primary" type="button" value="Voir Plus">
+                        <button type="submit" class="btn btn-success">Connect</button>
                     </div>
                     <div class="more-info-card">
-                        <p>A hard but endearing monster, not very good in java language but pretty good in php.</p>
-                        <input class="slideUp btn btn-primary col-12 mx-auto" type="button" value="Close">
+                        <p>Un peu dur mais attachant comme monstre, pas terrible en java mais plutot doué en php.</p>
+                        <input class="slideUp btn btn-primary col-12 mx-auto" type="button" value="Voir moins">
                     </div>
                 </div>
                 </div>
@@ -67,15 +67,17 @@
                         </div>
                         <h1 th:text="${list.name}">Morpionibus</h1>
                         <div class="choice d-flex justify-content-around">
-                            <input class="slideDown btn btn-primary" type="button" value="See more">
+                            <input class="slideDown btn btn-primary" type="button" value="Voir Plus">
                               <form action="/match" method="get">
-                                <input type="hidden" name="name">
-                                <button type="submit" class="btn btn-success">Choose</button>
+                                <input type="hidden" name="name" th:value="${list.name}">
+                                <input type="hidden" name="desc" th:value="${list.description}">
+                                <input type="hidden" name="pic" th:value="${list.picture}">
+                                <button type="submit" class="btn btn-success">Connect</button>
                               </form>
                         </div>
                         <div class="more-info-card">
                             <p th:text="${list.description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim autem dolores nobis unde dicta voluptatibus ipsa porro cumque. Alias hic optio quo. Porro ducimus exercitationem, quidem sint sit explicabo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab dicta at, numquam nobis consectetur. Pariatur, recusandae ipsum? Incidunt quaerat ratione illo sint dolorem repudiandae nulla assumenda officiis corporis explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vitae quia expedita, tenetur iste quibusdam modi, ducimus nihil velit consectetur itaque dolore magnam sapiente necessitatibus sint deleniti similique corporis facilis.</p>
-                            <input class="slideUp btn btn-primary col-12 mx-auto" type="button" value="Close">
+                            <input class="slideUp btn btn-primary col-12 mx-auto" type="button" value="Voir moins">
                         </div>
                     </div>
                 </div>
@@ -89,7 +91,6 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
         </a>
-        </div>
     </main>
     <footer>
 		  <p>The wide monster community thanks warmly Jean, Daniel <br> 

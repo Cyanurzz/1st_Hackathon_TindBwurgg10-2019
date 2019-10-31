@@ -7,7 +7,7 @@
     
 })(jQuery);
 $('.carousel').carousel({
-    interval: 10000
+    interval: 0
 });
 
 $(".more-info-card").hide(); //Cache More Info sur ma page
