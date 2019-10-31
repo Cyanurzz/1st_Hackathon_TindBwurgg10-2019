@@ -26,4 +26,5 @@ $(document).ready(function(){ //Dépli les info supplémentaire
       $(".topCard").slideDown();
     });
   });
+  // Add delay on Alert open
 $(".alert").show("slow").delay(2000).hide("slow");
