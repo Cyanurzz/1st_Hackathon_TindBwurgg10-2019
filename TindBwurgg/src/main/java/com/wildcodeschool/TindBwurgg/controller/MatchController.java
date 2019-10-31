@@ -12,8 +12,10 @@ public class MatchController {
 	
 	
 	@GetMapping("/match")
-	public String matchPage(@RequestParam(value="name") String monsterParm, ModelMap modelMap) {
-		modelMap.put("matchMonster", monsterParm);
+	public String matchPage(@RequestParam(value="name") String monsterName, @RequestParam(value="desc") String monsterDesc, @RequestParam(value="pic") String monsterPic, ModelMap modelMap) {
+		modelMap.put("monsterName", monsterName);
+		modelMap.put("monsterDesc", monsterDesc);
+		modelMap.put("monsterPic", monsterPic);
 		modelMap.addAttribute("film", FilmFromJson.getMyFilm());
 		
 			return "match";
