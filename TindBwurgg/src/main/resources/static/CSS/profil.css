@@ -22,12 +22,19 @@ footer{
 	font-size: 35px;
 }
 
-.slideDown, .btn-success{
+.slideDown, .slideUp, .btn-success{
 	background: #ff6a00;
 	color: black;
 	border: 0px !important;
 	box-shadow: 4px 4px 8px black !important;
 }
+.slideDown, .slideUp, .btn-success:hover{
+	background: #ff6a00 !important;
+	color: black !important;
+	border: 0px !important;
+	box-shadow: 4px 4px 8px black !important;
+}
+
 .choice{
 	margin-bottom: 15px;
 }
