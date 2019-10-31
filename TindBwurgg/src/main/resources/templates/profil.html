@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +40,11 @@
         </nav>
     </header>
     <main>
+      <section>
+        <div>
+          <h1 th:text = " 'hello ' + ${nameConnect}">hello</h1>
+        </div>
+      </section>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner col-12">
                 <div th:each="list : ${monster}" class="carousel-item active">
@@ -50,7 +56,10 @@
                         <h1 th:text="${list.name}">Morpionibus</h1>
                         <div class="choice d-flex justify-content-around">
                             <input class="slideDown btn btn-primary" type="button" value="Voir Plus">
-                            <input class="btn btn-success" type="button" value="Connect">
+                              <form action="/match" method="get">
+                                <input type="hidden" th:name="${list.name}">
+                                <button type="submit" class="btn btn-success">Connect</button>
+                              </form>
                         </div>
                         <div class="more-info-card">
                             <p th:text="${list.description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim autem dolores nobis unde dicta voluptatibus ipsa porro cumque. Alias hic optio quo. Porro ducimus exercitationem, quidem sint sit explicabo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab dicta at, numquam nobis consectetur. Pariatur, recusandae ipsum? Incidunt quaerat ratione illo sint dolorem repudiandae nulla assumenda officiis corporis explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vitae quia expedita, tenetur iste quibusdam modi, ducimus nihil velit consectetur itaque dolore magnam sapiente necessitatibus sint deleniti similique corporis facilis.</p>
