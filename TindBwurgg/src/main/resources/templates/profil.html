@@ -13,16 +13,14 @@
     
 </head>
 <body>
-    <header>
+    <header th:fragment="top">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <a class="navbar-brand" href="#"><h3>tind<span>Bwurgg !</span></h3></a>
+            <a class="navbar-brand" href="#"><h3>🩸tind<span>Bwurgg !</span></h3></a>
           
-            <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
           
-            <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
               <ul class="navbar-nav">
                 <li class="nav-item">
@@ -40,11 +38,27 @@
     </header>
     <main>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div th:each="list : ${monster}" class="carousel-inner col-12">
-                <div class="carousel-item active">
+            <div class="carousel-inner col-12">
+				<div class="carousel-item active">
                     <div class="card">
                         <div class="topCard">
                             <img src="https://via.placeholder.com/200x200?text=Profils+Tromb"  class="card-img-top" alt="...">
+                        </div>
+                        <h1>Perso a créer</h1>
+                        <div class="choice d-flex justify-content-around">
+                            <input class="slideDown btn btn-primary" type="button" value="Voir Plus">
+                            <input class="btn btn-success" type="button" value="Connect">
+                        </div>
+                        <div class="more-info-card">
+                            <p> Plus d'info a ajouter </p>
+                            <input class="slideUp btn btn-primary col-12 mx-auto" type="button" value="Voir moins">
+                        </div>
+                    </div>
+                </div>
+                <div th:each="list : ${monster}" class="carousel-item">
+                    <div class="card">
+                        <div class="topCard">
+                            <img th:src="@{${list.picture}}" class="card-img-top img-fluid" alt="...">
                         
                         </div>
                         <h1 th:text="${list.name}">Morpionibus</h1>

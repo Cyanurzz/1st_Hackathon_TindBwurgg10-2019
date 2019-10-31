@@ -26,3 +26,8 @@ $(document).ready(function(){ //Dépli les info supplémentaire
       $(".topCard").slideDown();
     });
   });
+
+    // Material Select Initialization
+$(document).ready(function() {
+  $('.').materialSelect();
+  });
