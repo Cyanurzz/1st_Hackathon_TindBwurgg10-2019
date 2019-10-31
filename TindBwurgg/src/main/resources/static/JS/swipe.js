@@ -27,4 +27,4 @@ $(document).ready(function(){ //Dépli les info supplémentaire
     });
   });
   // Add delay on Alert open
-$(".alert").show("slow").delay(2000).hide("slow");
+$(".alert").show("slow").delay(4000).hide("slow");

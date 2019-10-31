@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
 <head>
-<meta charset="UTF-8">
-<title>Match</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Match</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/CSS/style.scss">
+
+    
 </head>
 <body>
-<h1>Félicitation</h1>
-<h2>Voici la les infos sur le monstre que tu vas rencontrer</h2>
-<br>
+    <header>
 
-<ul th:each="list : ${film}">
-    <li th:text="${list.getTitle()}">title</li>
-    <li th:text="${list.director}">director</li>
-    <li th:text="${list.year}">Year</li>
-  	<img th:src="@{${list.posterUrl}}"/>
-</ul>
+    </header>
+        <main>
+            <div class="alert alert-success" role="alert">
+                <h4 th:text = "${nameConnect}" class="alert-heading"></h4>
+                <p>Whaou ! tu as trouvé cette personne de toute horreur ! tu me dégoute de joie ! </p>
+            </div>
+    
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto my-1">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected>Choose...</option>
+                            <option th:each="list : ${film}" th:text="${list.getTitle()}" value="1"></option>
+                        </select>
+                    </div>
+                    <input type="button" class="btn btn-success" values="Seen More">
+                </div>
+            </form>
 
 
-<p>choisi le film que tu vas partager avec lui</p>
-</body>
+            <ul th:each="list : ${film}">
+                <li th:text="${list.getTitle()}">title</li>
+                <li th:text="${list.director}">director</li>
+                <li th:text="${list.year}">Year</li>
+  	            <img th:src="@{${list.posterUrl}}"/>
+            </ul>
+
+
+            <p>choisi le film que tu vas partager avec lui</p>
+            <script src="swipe.js"></script>
+        </main>
+    </body>
 </html>
