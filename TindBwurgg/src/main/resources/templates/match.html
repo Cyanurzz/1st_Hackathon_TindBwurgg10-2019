@@ -15,7 +15,7 @@
     
 </head>
 <body>
-    <header>
+    <header th:replace="header.html :: top">
 
     </header>
         <main>
@@ -38,6 +38,7 @@
             </form>
 
 
+             
             <ul th:each="list : ${film}">
                 <li th:text="${list.getTitle()}">title</li>
                 <li th:text="${list.director}">director</li>

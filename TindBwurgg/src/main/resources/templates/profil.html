@@ -14,7 +14,7 @@
     
 </head>
 <body>
-    <header>
+    <header th:fragment="top">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <a class="navbar-brand" href="#"><h3>tind<span>Bwurgg !</span></h3></a>
           
@@ -41,7 +41,7 @@
     </header>
     <main>
         <div class="alert alert-success" role="alert">
-          <h4 th:text = " 'hello ' + ${nameConnect}"class="alert-heading"></h4>
+          <h4 th:text = " 'hello ' + ${nameConnect}" class="alert-heading"></h4>
           <p>Aww, Vous ètes divinement laid aujourd'hui !</p>
         </div>      
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -93,7 +93,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
         </a>
-        </div>
+      </div>
     </main>
     <footer>
         
