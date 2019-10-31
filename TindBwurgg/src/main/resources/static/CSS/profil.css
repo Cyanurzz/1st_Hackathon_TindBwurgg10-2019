@@ -16,6 +16,17 @@ footer{
 	
 }
 
+h1{
+	font-size: 20px !important;
+	color: #ff6a00 !important;
+	font-family: 'roboto', sans-serif;
+	text-align: center;
+	margin-top: 15px;
+}
+
+
+
+
 .navbar h3{
 	font-family: 'lacquer', sans-serif;
 	color: #ff6a00;
