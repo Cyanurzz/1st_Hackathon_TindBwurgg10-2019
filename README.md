@@ -1,4 +1,4 @@
-# TindBwurgg _1er Prix_
+# TindBwurgg Hackathon _1er Prix_ at Wild Code School
 Après un mois et demi a la Wild code School, nous avons eu le privilège de réaliser notre première Hackathon,
 
 ## Sujet : 
