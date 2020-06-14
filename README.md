@@ -1,11 +1,12 @@
-# TindBwurgg Hackathon _1er Prix_ at Wild Code School
-Après un mois et demi a la Wild code School, nous avons eu le privilège de réaliser notre première Hackathon,
+# TindBwurgg Hackathon _1er Place_ at WildCodeSchool
+Afeter one month and a half at Wild code School, we've got ours first hackathon ! 
 
-## Sujet : 
-Le thème étais  : _Horror Movie Night_  
-Notre objectifs étais de réaliser une application web,  
-notre seul contrainte était cette [API](https://hackathon-wild-hackoween.herokuapp.com/)  
-Cette dernière contenait des films ainsi que des monstres de film d'horreur. Étant trop horienté vers un jeux vidéo (caractèristique de combat, ou "_A quel film appartient ce monstre ?_",... )  
-Nous avons opté pour un site de rencontre pour monstre ...
+## Theme : 
+ The theme was : _Horror Movie Night_  
+Our goal was to create anything in 24h,  
+We've got only one constraint [API](https://hackathon-wild-hackoween.herokuapp.com/)  
+This Api contains horros movies and monster from horros movies. Being too obsessed with a video game (fighting characteristic,... )  
+So I suggested to go in the opposite ! An app like tinder but for monster were fighting characteristic, ... are point of charism, ...
+So we build this app !
 
-Hackathon du 30 au 31 Octobre 2019 Wild Code School
+Hackathon 30/31 October 2019 at Wild Code School
