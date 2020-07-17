@@ -1,5 +1,5 @@
 # TindBwurgg Hackathon _1er Place_ at WildCodeSchool
-Afeter one month and a half at Wild code School, we've got ours first hackathon ! 
+After one month and a half at Wild code School, we've got ours first hackathon ! 
 
 ## Theme : 
  The theme was : _Horror Movie Night_  
